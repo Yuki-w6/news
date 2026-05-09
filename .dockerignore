@@ -1,0 +1,15 @@
+.git
+.devcontainer
+.env
+.vscode
+
+log/*
+tmp/*
+storage/*
+
+.bundle
+vendor/bundle
+node_modules
+public/assets
+public/packs
+public/vite

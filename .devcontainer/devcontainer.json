@@ -1,0 +1,40 @@
+{
+  "name": "news Rails React PostgreSQL",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "castwide.solargraph",
+        "rebornix.Ruby",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "rubyLsp.rubyVersionManager": "none",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "forwardPorts": [
+    3000,
+    5432
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL"
+    }
+  },
+  "postCreateCommand": "bundle config set path vendor/bundle && corepack enable"
+}
