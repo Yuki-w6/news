@@ -12,8 +12,7 @@ else
     --database=postgresql \
     --javascript=esbuild \
     --skip-docker \
-    --skip-git \
-    --skip-test
+    --skip-git
 
   shopt -s dotglob
   cp -Rn "${tmp_app}/"* .
