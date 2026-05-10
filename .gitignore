@@ -1,24 +1,27 @@
 .DS_Store
 .env
+.env.*
+!.env.example
 .vscode/
 
 # Rails
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-/storage/*
-!/storage/.keep
-/public/assets
-/public/packs
-/public/vite
+**/config/master.key
+**/log/*
+**/tmp/*
+!**/log/.keep
+!**/tmp/.keep
+**/storage/*
+!**/storage/.keep
+**/public/assets
+**/public/packs
+**/public/vite
 
 # Ruby
-/.bundle/
-/vendor/bundle/
+**/.bundle/
+**/vendor/bundle/
 
 # JavaScript
-/node_modules/
+**/node_modules/
 /yarn-error.log
 /npm-debug.log*
 /pnpm-debug.log*
